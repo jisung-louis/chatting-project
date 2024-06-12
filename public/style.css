@@ -1,0 +1,36 @@
+/* public/style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#login, #chat {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+#loginForm, #form {
+  display: flex;
+}
+
+#username, #input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#messages li {
+  padding: 8px;
+  background: #f4f4f4;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
