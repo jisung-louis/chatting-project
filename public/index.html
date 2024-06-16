@@ -1,4 +1,3 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +14,31 @@
     </form>
   </div>
   <div id="chat" style="display:none;">
-    <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
+    <div id="main-chat">
+      <ul id="messages"></ul>
+      <form id="form" action="">
+        <input id="input" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+    <div id="sidebar">
+      <h3>Online Users</h3>
+      <ul id="user-list"></ul>
+      <button id="admin-login-btn">Admin Login</button>
+    </div>
   </div>
+
+  <!-- Admin Login Modal -->
+  <div id="admin-login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="adminLoginForm">
+        <input id="admin-username" type="text" placeholder="Admin Username" required />
+        <input id="admin-password" type="password" placeholder="Admin Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
